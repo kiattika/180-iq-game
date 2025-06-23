@@ -1,4 +1,4 @@
-
+import { Analytics } from '@vercel/analytics/react';
 import React, { useState, useEffect } from 'react';
 import HomeScreen from './components/HomeScreen';
 import GameScreen from './components/GameScreen';
@@ -85,6 +85,7 @@ const App: React.FC = () => {
     <div className="min-h-screen bg-slate-900 text-slate-100 antialiased selection:bg-sky-500 selection:text-white">
       {renderView()}
       <ReloadPrompt /> {/* Add ReloadPrompt here */}
+      <Analytics />
     </div>
   );
 };
